@@ -1,0 +1,7 @@
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\DAL\bin\Debug\netcoreapp1.1\DAL.deps.json
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\DAL\bin\Debug\netcoreapp1.1\DAL.dll
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\DAL\obj\Debug\netcoreapp1.1\DAL.AssemblyInfo.cs
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\DAL\bin\Debug\netcoreapp1.1\DAL.pdb
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\DAL\obj\Debug\netcoreapp1.1\DAL.dll
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\DAL\obj\Debug\netcoreapp1.1\DAL.pdb
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\DAL\obj\Debug\netcoreapp1.1\DAL.csprojResolveAssemblyReference.cache

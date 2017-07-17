@@ -1,0 +1,13 @@
+c:\users\jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\bin\Debug\netcoreapp1.1\ZrihtiApi.deps.json
+c:\users\jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\bin\Debug\netcoreapp1.1\ZrihtiApi.runtimeconfig.json
+c:\users\jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\bin\Debug\netcoreapp1.1\ZrihtiApi.runtimeconfig.dev.json
+c:\users\jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\bin\Debug\netcoreapp1.1\ZrihtiApi.dll
+c:\users\jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\bin\Debug\netcoreapp1.1\ZrihtiApi.pdb
+c:\users\jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\obj\Debug\netcoreapp1.1\ZrihtiApi.AssemblyInfo.cs
+c:\users\jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\obj\Debug\netcoreapp1.1\ZrihtiApi.dll
+c:\users\jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\obj\Debug\netcoreapp1.1\ZrihtiApi.pdb
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\bin\Debug\netcoreapp1.1\Business.dll
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\bin\Debug\netcoreapp1.1\Business.pdb
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\obj\Debug\netcoreapp1.1\ZrihtiApi.csprojResolveAssemblyReference.cache
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\bin\Debug\netcoreapp1.1\DAL.dll
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\ZrihtiApi\bin\Debug\netcoreapp1.1\DAL.pdb

@@ -1,0 +1,9 @@
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\Business\bin\Debug\netcoreapp1.1\Business.deps.json
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\Business\bin\Debug\netcoreapp1.1\Business.dll
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\Business\bin\Debug\netcoreapp1.1\Business.pdb
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\Business\obj\Debug\netcoreapp1.1\Business.AssemblyInfo.cs
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\Business\obj\Debug\netcoreapp1.1\Business.dll
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\Business\obj\Debug\netcoreapp1.1\Business.pdb
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\Business\bin\Debug\netcoreapp1.1\DAL.dll
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\Business\bin\Debug\netcoreapp1.1\DAL.pdb
+C:\Users\Jakic\documents\visual studio 2017\Projects\ZrihtiApi\Business\obj\Debug\netcoreapp1.1\Business.csprojResolveAssemblyReference.cache
