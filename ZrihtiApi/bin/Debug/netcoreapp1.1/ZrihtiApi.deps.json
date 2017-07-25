@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "41e59c45ac6e4a94d67ebfbba7e37c37d4f50a0e"
+    "signature": "3d734aa65049d34a55e2d7f1213011fa37d28d44"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,7 @@
       "zrihtiapi/1.0.0": {
         "dependencies": {
           "Business": "1.0.0",
+          "MailKit": "1.16.2",
           "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
           "Microsoft.AspNetCore": "1.1.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "1.1.2",
@@ -40,6 +41,27 @@
         },
         "compile": {
           "ZrihtiApi.dll": {}
+        }
+      },
+      "mailkit/1.16.2": {
+        "dependencies": {
+          "MimeKit": "1.16.2",
+          "NETStandard.Library": "1.6.1",
+          "Portable.BouncyCastle": "1.8.1.2",
+          "System.Data.Common": "4.3.0",
+          "System.Globalization.Extensions": "4.3.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.NetworkInformation": "4.3.0",
+          "System.Net.Security": "4.3.1",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Text.Encoding.CodePages": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/MailKit.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/MailKit.dll": {}
         }
       },
       "microsoft.applicationinsights/2.2.0": {
@@ -1333,6 +1355,25 @@
           "lib/netstandard1.1/Microsoft.Net.Http.Headers.dll": {}
         }
       },
+      "mimekit/1.16.2": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Portable.BouncyCastle": "1.8.1.2",
+          "System.Data.Common": "4.3.0",
+          "System.Globalization.Extensions": "4.3.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.NetworkInformation": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Text.Encoding.CodePages": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/MimeKit.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/MimeKit.dll": {}
+        }
+      },
       "newtonsoft.json/9.0.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
@@ -1363,6 +1404,17 @@
         },
         "compile": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "portable.bouncycastle/1.8.1.2": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
         }
       },
       "remotion.linq/2.1.1": {
@@ -1658,6 +1710,50 @@
           }
         }
       },
+      "system.net.networkinformation/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Net.Primitives": "4.3.0",
+          "System.Net.Sockets": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Security.Principal.Windows": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Overlapped": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "runtimeTargets": {
+          "runtimes/linux/lib/netstandard1.3/System.Net.NetworkInformation.dll": {
+            "rid": "linux",
+            "assetType": "runtime"
+          },
+          "runtimes/osx/lib/netstandard1.3/System.Net.NetworkInformation.dll": {
+            "rid": "osx",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.NetworkInformation.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Net.NetworkInformation.dll": {}
+        }
+      },
       "system.net.websockets/4.3.0": {
         "dependencies": {
           "Microsoft.Win32.Primitives": "4.3.0",
@@ -1719,6 +1815,9 @@
             "rid": "win",
             "assetType": "runtime"
           }
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "system.text.encodings.web/4.3.1": {
@@ -1741,6 +1840,7 @@
       "business/1.0.0": {
         "dependencies": {
           "DAL": "1.0.0",
+          "MailKit": "1.16.2",
           "Microsoft.NETCore.App": "1.1.2"
         },
         "runtime": {
@@ -3426,6 +3526,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "mailkit/1.16.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+TmqWZlDbON05CpqiH6N++LUtqwW6SjUzc526srAogqJvjeTuAYN6vni5jc+riNBc3CFKS23VlyYqOxlZ943IA==",
+      "path": "mailkit/1.16.2",
+      "hashPath": "mailkit.1.16.2.nupkg.sha512"
+    },
     "microsoft.applicationinsights/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4042,12 +4149,26 @@
       "path": "microsoft.net.http.headers/1.1.2",
       "hashPath": "microsoft.net.http.headers.1.1.2.nupkg.sha512"
     },
+    "mimekit/1.16.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n/yoKMfFXUSUzQPz+wvl+eArDA01XntJ3z40DBUduAEpx8QXEpLMRhr177Lwi23dHRA4/aDqb3+X2b6r/X/1hw==",
+      "path": "mimekit/1.16.2",
+      "hashPath": "mimekit.1.16.2.nupkg.sha512"
+    },
     "newtonsoft.json/9.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
+    },
+    "portable.bouncycastle/1.8.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G0pWrYwtjjiyka+twqqphegc4ddDWskvf2uWu2YiAUNdaAz0UYa/eXBlt+xjafby5Opa6J1ySw5MPezwiGi9aQ==",
+      "path": "portable.bouncycastle/1.8.1.2",
+      "hashPath": "portable.bouncycastle.1.8.1.2.nupkg.sha512"
     },
     "remotion.linq/2.1.1": {
       "type": "package",
@@ -4160,6 +4281,13 @@
       "sha512": "sha512-wpGJuACA6r8+KRckXoI6ghGTwgPRiICI6T7kgHI/m7S5eMqV/8jH37fzAUhTwIe9RwlH/j1sWwm2Q2zyXwZGHw==",
       "path": "system.io.pipes/4.3.0",
       "hashPath": "system.io.pipes.4.3.0.nupkg.sha512"
+    },
+    "system.net.networkinformation/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zNVmWVry0pAu7lcrRBhwwU96WUdbsrGL3azyzsbXmVNptae1+Za+UgOe9Z6s8iaWhPn7/l4wQqhC56HZWq7tkg==",
+      "path": "system.net.networkinformation/4.3.0",
+      "hashPath": "system.net.networkinformation.4.3.0.nupkg.sha512"
     },
     "system.net.websockets/4.3.0": {
       "type": "package",

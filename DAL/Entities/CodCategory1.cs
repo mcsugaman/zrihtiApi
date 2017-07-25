@@ -11,8 +11,10 @@ namespace DAL.Entities
         }
 
         public int IdCategoryCod { get; set; }
+        public int? IdAreaCod { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<CodService> CodService { get; set; }
+        public virtual CodArea IdAreaCodNavigation { get; set; }
     }
 }

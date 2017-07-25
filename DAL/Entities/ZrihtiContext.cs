@@ -13,13 +13,19 @@ namespace DAL.Entities
         public virtual DbSet<AspNetUserRoles> AspNetUserRoles { get; set; }
         public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public virtual DbSet<Badge> Badge { get; set; }
+        public virtual DbSet<BadgeImg> BadgeImg { get; set; }
         public virtual DbSet<Banner1> Banner1 { get; set; }
+        public virtual DbSet<CodArea> CodArea { get; set; }
         public virtual DbSet<CodCategory1> CodCategory1 { get; set; }
+        public virtual DbSet<CodContractType> CodContractType { get; set; }
         public virtual DbSet<CodCurrency> CodCurrency { get; set; }
         public virtual DbSet<CodDay> CodDay { get; set; }
         public virtual DbSet<CodDbtable> CodDbtable { get; set; }
         public virtual DbSet<CodFeedbackType> CodFeedbackType { get; set; }
         public virtual DbSet<CodLanguage> CodLanguage { get; set; }
+        public virtual DbSet<CodOs> CodOs { get; set; }
+        public virtual DbSet<CodPhone> CodPhone { get; set; }
         public virtual DbSet<CodPlace> CodPlace { get; set; }
         public virtual DbSet<CodPlanType> CodPlanType { get; set; }
         public virtual DbSet<CodPriceSetter> CodPriceSetter { get; set; }
@@ -30,6 +36,10 @@ namespace DAL.Entities
         public virtual DbSet<CodSocialNetwork> CodSocialNetwork { get; set; }
         public virtual DbSet<CodelistTr> CodelistTr { get; set; }
         public virtual DbSet<Feedback> Feedback { get; set; }
+        public virtual DbSet<MobilePackage> MobilePackage { get; set; }
+        public virtual DbSet<MobilePackagePrice> MobilePackagePrice { get; set; }
+        public virtual DbSet<MobilePackagePriceTr> MobilePackagePriceTr { get; set; }
+        public virtual DbSet<MobileProvider> MobileProvider { get; set; }
         public virtual DbSet<Office> Office { get; set; }
         public virtual DbSet<Package> Package { get; set; }
         public virtual DbSet<PackageTr> PackageTr { get; set; }
@@ -43,6 +53,7 @@ namespace DAL.Entities
         public virtual DbSet<Provider> Provider { get; set; }
         public virtual DbSet<ProviderImg> ProviderImg { get; set; }
         public virtual DbSet<ProviderTr> ProviderTr { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Service> Service { get; set; }
         public virtual DbSet<ServiceDescription> ServiceDescription { get; set; }
         public virtual DbSet<ServiceDescriptionImg> ServiceDescriptionImg { get; set; }
@@ -51,10 +62,49 @@ namespace DAL.Entities
         public virtual DbSet<SocialNetwork> SocialNetwork { get; set; }
         public virtual DbSet<WorkingTime> WorkingTime { get; set; }
 
+        // Unable to generate entity type for table 'dbo.tmp_Badge'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_BadgeIMG'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_Banner'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_Area'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.__EFMigrationsHistory$'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_Category'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.AspNetRoleClaims$'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.Banner$'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_ContractType'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.COD_Category$'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_Currency'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_DBTable'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_Day'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_FeedbackType'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_Language'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_OS'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_Phone'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_Place'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_PlanType'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_PriceSetter'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_PriceSetterType'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_PriceType'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_Province'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_Service'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_COD_SocialNetwork'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_CodelistTR'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_Feedback'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_MobilePackage'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_MobilePackagePrice'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_MobilePackagePriceTR'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_MobileProvider'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_Office'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_Package'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_PlanPackage'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_PortalUser'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_PriceSetter'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_PromotionPlan'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_Provider'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_Role'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_Service'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_ServiceDescription'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_SocialNetwork'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.tmp_WorkingTime'. Please see the warning messages.
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -185,6 +235,62 @@ namespace DAL.Entities
                 entity.Property(e => e.UserName).HasMaxLength(256);
             });
 
+            modelBuilder.Entity<Badge>(entity =>
+            {
+                entity.HasKey(e => e.IdBadge)
+                    .HasName("PK_BADGE");
+
+                entity.HasIndex(e => e.IdBadgeImg)
+                    .HasName("BadgeIMG_FK");
+
+                entity.HasIndex(e => e.IdMobilePackage)
+                    .HasName("MobilePackage_Badge_FK");
+
+                entity.HasIndex(e => e.IdPhonePrice)
+                    .HasName("Badge_MobilePackagePrice_FK");
+
+                entity.Property(e => e.IdBadge).HasColumnName("ID_Badge");
+
+                entity.Property(e => e.Colour).HasColumnType("text");
+
+                entity.Property(e => e.IdBadgeImg).HasColumnName("ID_BadgeIMG");
+
+                entity.Property(e => e.IdMobilePackage).HasColumnName("ID_MobilePackage");
+
+                entity.Property(e => e.IdPhonePrice).HasColumnName("ID_PhonePrice");
+
+                entity.Property(e => e.Text).HasColumnType("text");
+
+                entity.HasOne(d => d.IdBadgeImgNavigation)
+                    .WithMany(p => p.Badge)
+                    .HasForeignKey(d => d.IdBadgeImg)
+                    .HasConstraintName("FK_BADGE_BADGEIMG_BADGEIMG");
+
+                entity.HasOne(d => d.IdMobilePackageNavigation)
+                    .WithMany(p => p.Badge)
+                    .HasForeignKey(d => d.IdMobilePackage)
+                    .HasConstraintName("FK_BADGE_MOBILEPAC_MOBILEPA");
+
+                entity.HasOne(d => d.IdPhonePriceNavigation)
+                    .WithMany(p => p.Badge)
+                    .HasForeignKey(d => d.IdPhonePrice)
+                    .HasConstraintName("FK_BADGE_BADGE_MOB_MOBILEPA");
+            });
+
+            modelBuilder.Entity<BadgeImg>(entity =>
+            {
+                entity.HasKey(e => e.IdBadgeImg)
+                    .HasName("PK_BADGEIMG");
+
+                entity.ToTable("BadgeIMG");
+
+                entity.Property(e => e.IdBadgeImg).HasColumnName("ID_BadgeIMG");
+
+                entity.Property(e => e.ImageUrl).HasColumnType("text");
+
+                entity.Property(e => e.Name).HasColumnType("text");
+            });
+
             modelBuilder.Entity<Banner1>(entity =>
             {
                 entity.HasKey(e => e.IdBanner)
@@ -218,6 +324,18 @@ namespace DAL.Entities
                     .HasConstraintName("FK_BANNER_BANNER_PR_PROVIDER");
             });
 
+            modelBuilder.Entity<CodArea>(entity =>
+            {
+                entity.HasKey(e => e.IdAreaCod)
+                    .HasName("PK_COD_AREA");
+
+                entity.ToTable("COD_Area");
+
+                entity.Property(e => e.IdAreaCod).HasColumnName("ID_AreaCOD");
+
+                entity.Property(e => e.Name).HasColumnType("text");
+            });
+
             modelBuilder.Entity<CodCategory1>(entity =>
             {
                 entity.HasKey(e => e.IdCategoryCod)
@@ -225,11 +343,33 @@ namespace DAL.Entities
 
                 entity.ToTable("COD_Category");
 
+                entity.HasIndex(e => e.IdAreaCod)
+                    .HasName("PReCategory_Category_FK");
+
                 entity.Property(e => e.IdCategoryCod).HasColumnName("ID_CategoryCOD");
+
+                entity.Property(e => e.IdAreaCod).HasColumnName("ID_AreaCOD");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasColumnType("text");
+
+                entity.HasOne(d => d.IdAreaCodNavigation)
+                    .WithMany(p => p.CodCategory1)
+                    .HasForeignKey(d => d.IdAreaCod)
+                    .HasConstraintName("FK_COD_CATE_PRECATEGO_COD_AREA");
+            });
+
+            modelBuilder.Entity<CodContractType>(entity =>
+            {
+                entity.HasKey(e => e.IdContarctTypeCod)
+                    .HasName("PK_COD_CONTRACTTYPE");
+
+                entity.ToTable("COD_ContractType");
+
+                entity.Property(e => e.IdContarctTypeCod).HasColumnName("ID_ContarctTypeCOD");
+
+                entity.Property(e => e.Name).HasColumnType("text");
             });
 
             modelBuilder.Entity<CodCurrency>(entity =>
@@ -306,6 +446,65 @@ namespace DAL.Entities
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasColumnType("text");
+            });
+
+            modelBuilder.Entity<CodOs>(entity =>
+            {
+                entity.HasKey(e => e.IdOscod)
+                    .HasName("PK_COD_OS");
+
+                entity.ToTable("COD_OS");
+
+                entity.Property(e => e.IdOscod).HasColumnName("ID_OSCOD");
+
+                entity.Property(e => e.Name).HasColumnType("text");
+            });
+
+            modelBuilder.Entity<CodPhone>(entity =>
+            {
+                entity.HasKey(e => e.IdPhoneCod)
+                    .HasName("PK_COD_PHONE");
+
+                entity.ToTable("COD_Phone");
+
+                entity.HasIndex(e => e.IdOscod)
+                    .HasName("Phone_OS_FK");
+
+                entity.Property(e => e.IdPhoneCod).HasColumnName("ID_PhoneCOD");
+
+                entity.Property(e => e.Battery).HasColumnType("text");
+
+                entity.Property(e => e.Camera).HasColumnType("text");
+
+                entity.Property(e => e.ColorDepth).HasColumnType("text");
+
+                entity.Property(e => e.DateChanged).HasColumnType("datetime");
+
+                entity.Property(e => e.DateCreated).HasColumnType("datetime");
+
+                entity.Property(e => e.DateDeleted).HasColumnType("datetime");
+
+                entity.Property(e => e.Dimensions).HasColumnType("text");
+
+                entity.Property(e => e.IdOscod).HasColumnName("ID_OSCOD");
+
+                entity.Property(e => e.ImageUrlPhone).HasColumnType("text");
+
+                entity.Property(e => e.Name).HasColumnType("text");
+
+                entity.Property(e => e.Processor).HasColumnType("text");
+
+                entity.Property(e => e.Ram).HasColumnType("text");
+
+                entity.Property(e => e.Resolution).HasColumnType("text");
+
+                entity.Property(e => e.Weight).HasColumnType("text");
+
+                entity.HasOne(d => d.IdOscodNavigation)
+                    .WithMany(p => p.CodPhone)
+                    .HasForeignKey(d => d.IdOscod)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_COD_PHON_PHONE_OS_COD_OS");
             });
 
             modelBuilder.Entity<CodPlace>(entity =>
@@ -542,6 +741,156 @@ namespace DAL.Entities
                     .HasConstraintName("FK_FEEDBACK_USER_FEED_PORTALUS");
             });
 
+            modelBuilder.Entity<MobilePackage>(entity =>
+            {
+                entity.HasKey(e => e.IdMobilePackage)
+                    .HasName("PK_MOBILEPACKAGE");
+
+                entity.HasIndex(e => e.IdContarctTypeCod)
+                    .HasName("ContractType_MobilePackage_FK");
+
+                entity.Property(e => e.IdMobilePackage).HasColumnName("ID_MobilePackage");
+
+                entity.Property(e => e.DateChanged).HasColumnType("datetime");
+
+                entity.Property(e => e.DateCreated).HasColumnType("datetime");
+
+                entity.Property(e => e.DateDeleted).HasColumnType("datetime");
+
+                entity.Property(e => e.IdContarctTypeCod).HasColumnName("ID_ContarctTypeCOD");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasColumnType("text");
+
+                entity.Property(e => e.PriceMonthly).HasColumnType("money");
+
+                entity.HasOne(d => d.IdContarctTypeCodNavigation)
+                    .WithMany(p => p.MobilePackage)
+                    .HasForeignKey(d => d.IdContarctTypeCod)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_MOBILEPA_CONTRACTT_COD_CONT");
+            });
+
+            modelBuilder.Entity<MobilePackagePrice>(entity =>
+            {
+                entity.HasKey(e => e.IdPhonePrice)
+                    .HasName("PK_MOBILEPACKAGEPRICE");
+
+                entity.HasIndex(e => e.IdContarctTypeCod)
+                    .HasName("MobilePackagePrice_ContractType_FK");
+
+                entity.HasIndex(e => e.IdMobilePackage)
+                    .HasName("MobilePackagePrice_MobilePackage_FK");
+
+                entity.HasIndex(e => e.IdMobileProvider)
+                    .HasName("MobieProvider_MobilePackageProvider_FK");
+
+                entity.HasIndex(e => e.IdPhoneCod)
+                    .HasName("Phone_MobilePackagePrice_FK");
+
+                entity.Property(e => e.IdPhonePrice).HasColumnName("ID_PhonePrice");
+
+                entity.Property(e => e.DateChanged).HasColumnType("datetime");
+
+                entity.Property(e => e.DateCreated).HasColumnType("datetime");
+
+                entity.Property(e => e.DateDeleted).HasColumnType("datetime");
+
+                entity.Property(e => e.IdContarctTypeCod).HasColumnName("ID_ContarctTypeCOD");
+
+                entity.Property(e => e.IdMobilePackage).HasColumnName("ID_MobilePackage");
+
+                entity.Property(e => e.IdMobileProvider).HasColumnName("ID_MobileProvider");
+
+                entity.Property(e => e.IdPhoneCod).HasColumnName("ID_PhoneCOD");
+
+                entity.Property(e => e.PriceMonthly).HasColumnType("money");
+
+                entity.Property(e => e.PriceWithContract).HasColumnType("money");
+
+                entity.Property(e => e.TotalCost).HasColumnType("money");
+
+                entity.Property(e => e.Upfront).HasColumnType("money");
+
+                entity.HasOne(d => d.IdContarctTypeCodNavigation)
+                    .WithMany(p => p.MobilePackagePrice)
+                    .HasForeignKey(d => d.IdContarctTypeCod)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_MOBILEPA_MOBILEPAC_COD_CONT");
+
+                entity.HasOne(d => d.IdMobilePackageNavigation)
+                    .WithMany(p => p.MobilePackagePrice)
+                    .HasForeignKey(d => d.IdMobilePackage)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_MOBILEPA_MOBILEPAC_MOBILEPA");
+
+                entity.HasOne(d => d.IdMobileProviderNavigation)
+                    .WithMany(p => p.MobilePackagePrice)
+                    .HasForeignKey(d => d.IdMobileProvider)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_MOBILEPA_MOBIEPROV_MOBILEPR");
+
+                entity.HasOne(d => d.IdPhoneCodNavigation)
+                    .WithMany(p => p.MobilePackagePrice)
+                    .HasForeignKey(d => d.IdPhoneCod)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_MOBILEPA_PHONE_MOB_COD_PHON");
+            });
+
+            modelBuilder.Entity<MobilePackagePriceTr>(entity =>
+            {
+                entity.HasKey(e => e.IdMobilePackagePriceTr)
+                    .HasName("PK_MOBILEPACKAGEPRICETR");
+
+                entity.ToTable("MobilePackagePriceTR");
+
+                entity.HasIndex(e => e.IdLanguageCod)
+                    .HasName("MobilePackagePrice_Language_FK");
+
+                entity.HasIndex(e => e.IdPhonePrice)
+                    .HasName("MobilePackagePriceTR_FK");
+
+                entity.Property(e => e.IdMobilePackagePriceTr).HasColumnName("ID_MobilePackagePriceTR");
+
+                entity.Property(e => e.IdLanguageCod).HasColumnName("ID_LanguageCOD");
+
+                entity.Property(e => e.IdPhonePrice).HasColumnName("ID_PhonePrice");
+
+                entity.Property(e => e.Note).HasColumnType("text");
+
+                entity.HasOne(d => d.IdLanguageCodNavigation)
+                    .WithMany(p => p.MobilePackagePriceTr)
+                    .HasForeignKey(d => d.IdLanguageCod)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_MOBILEPA_MOBILEPAC_COD_LANG");
+
+                entity.HasOne(d => d.IdPhonePriceNavigation)
+                    .WithMany(p => p.MobilePackagePriceTr)
+                    .HasForeignKey(d => d.IdPhonePrice)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_MOBILEPA_MOBILEPAC_MOBILEPA1");
+            });
+
+            modelBuilder.Entity<MobileProvider>(entity =>
+            {
+                entity.HasKey(e => e.IdMobileProvider)
+                    .HasName("PK_MOBILEPROVIDER");
+
+                entity.HasIndex(e => e.IdProvider)
+                    .HasName("Relationship_56_FK");
+
+                entity.Property(e => e.IdMobileProvider).HasColumnName("ID_MobileProvider");
+
+                entity.Property(e => e.IdProvider).HasColumnName("ID_Provider");
+
+                entity.HasOne(d => d.IdProviderNavigation)
+                    .WithMany(p => p.MobileProvider)
+                    .HasForeignKey(d => d.IdProvider)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_MOBILEPR_RELATIONS_PROVIDER");
+            });
+
             modelBuilder.Entity<Office>(entity =>
             {
                 entity.HasKey(e => e.IdOffice)
@@ -717,7 +1066,7 @@ namespace DAL.Entities
 
                 entity.Property(e => e.IdPlanTypeCod).HasColumnName("ID_PlanTypeCOD");
 
-                entity.Property(e => e.Price).HasColumnType("money");
+                entity.Property(e => e.PriceMonthly).HasColumnType("money");
 
                 entity.Property(e => e.ValidFrom).HasColumnType("datetime");
 
@@ -782,7 +1131,12 @@ namespace DAL.Entities
                 entity.HasIndex(e => e.IdProvider)
                     .HasName("User_Provider_FK");
 
+                entity.HasIndex(e => e.IdRole)
+                    .HasName("PortalUser_Role_FK");
+
                 entity.Property(e => e.IdPortalUser).HasColumnName("ID_PortalUser");
+
+                entity.Property(e => e.ConfirmationHash).HasColumnType("varchar(1024)");
 
                 entity.Property(e => e.DateChanged).HasColumnType("datetime");
 
@@ -791,6 +1145,8 @@ namespace DAL.Entities
                 entity.Property(e => e.DateDeleted).HasColumnType("datetime");
 
                 entity.Property(e => e.IdProvider).HasColumnName("ID_Provider");
+
+                entity.Property(e => e.IdRole).HasColumnName("ID_Role");
 
                 entity.Property(e => e.IsProvider).HasColumnName("IS_Provider");
 
@@ -805,10 +1161,20 @@ namespace DAL.Entities
 
                 entity.Property(e => e.NameLast).HasColumnType("text");
 
+                entity.Property(e => e.Password).HasColumnType("text");
+
+                entity.Property(e => e.Username).HasColumnType("text");
+
                 entity.HasOne(d => d.IdProviderNavigation)
                     .WithMany(p => p.PortalUser)
                     .HasForeignKey(d => d.IdProvider)
                     .HasConstraintName("FK_PORTALUS_USER_PROV_PROVIDER");
+
+                entity.HasOne(d => d.IdRoleNavigation)
+                    .WithMany(p => p.PortalUser)
+                    .HasForeignKey(d => d.IdRole)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_PORTALUS_PORTALUSE_ROLE");
             });
 
             modelBuilder.Entity<PortalUserImg>(entity =>
@@ -1060,6 +1426,16 @@ namespace DAL.Entities
                     .HasForeignKey(d => d.IdProvider)
                     .OnDelete(DeleteBehavior.Restrict)
                     .HasConstraintName("FK_PROVIDER_PROVIDERT_PROVIDER");
+            });
+
+            modelBuilder.Entity<Role>(entity =>
+            {
+                entity.HasKey(e => e.IdRole)
+                    .HasName("PK_ROLE");
+
+                entity.Property(e => e.IdRole).HasColumnName("ID_Role");
+
+                entity.Property(e => e.Name).HasColumnType("text");
             });
 
             modelBuilder.Entity<Service>(entity =>

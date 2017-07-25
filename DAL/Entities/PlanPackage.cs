@@ -15,7 +15,7 @@ namespace DAL.Entities
         public int IdCurrencyCod { get; set; }
         public int IdPlanTypeCod { get; set; }
         public int Supply { get; set; }
-        public decimal Price { get; set; }
+        public decimal PriceMonthly { get; set; }
         public DateTime ValidFrom { get; set; }
         public DateTime? ValidTo { get; set; }
         public DateTime DateCreated { get; set; }

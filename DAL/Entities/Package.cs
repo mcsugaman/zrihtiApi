@@ -16,12 +16,12 @@ namespace DAL.Entities
         public int IdPriceTypeCod { get; set; }
         public int IdCurrencyCod { get; set; }
         public int? IdProvider { get; set; }
-        public decimal? Price { get; set; }
+        public DateTime? DateDeleted { get; set; }
         public DateTime ValidFrom { get; set; }
         public DateTime? ValidTo { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime? DateChanged { get; set; }
-        public DateTime? DateDeleted { get; set; }
+        public decimal? Price { get; set; }
 
         public virtual ICollection<PackageTr> PackageTr { get; set; }
         public virtual ICollection<PriceSetter> PriceSetter { get; set; }

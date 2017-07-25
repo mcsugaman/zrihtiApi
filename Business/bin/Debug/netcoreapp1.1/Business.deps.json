@@ -1,17 +1,31 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "decb855c67cbbf0d215bcaf33b4b442b0c54f621"
+    "signature": "987a0a2d5ba8a62ca3c06e8672ab3898be493ac9"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "business/1.0.0": {
         "dependencies": {
-          "DAL": "1.0.0"
+          "DAL": "1.0.0",
+          "MailKit": "1.16.2"
         },
         "runtime": {
           "Business.dll": {}
+        }
+      },
+      "mailkit/1.16.2": {
+        "dependencies": {
+          "MimeKit": "1.16.2",
+          "Portable.BouncyCastle": "1.8.1.2",
+          "System.Data.Common": "4.3.0",
+          "System.Net.NetworkInformation": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Text.Encoding.CodePages": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/MailKit.dll": {}
         }
       },
       "microsoft.aspnetcore.hosting.abstractions/1.1.1": {
@@ -213,6 +227,23 @@
           "lib/netstandard1.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
+      "mimekit/1.16.2": {
+        "dependencies": {
+          "Portable.BouncyCastle": "1.8.1.2",
+          "System.Data.Common": "4.3.0",
+          "System.Net.NetworkInformation": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Text.Encoding.CodePages": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/MimeKit.dll": {}
+        }
+      },
+      "portable.bouncycastle/1.8.1.2": {
+        "runtime": {
+          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
+        }
+      },
       "remotion.linq/2.1.1": {
         "runtime": {
           "lib/netstandard1.0/Remotion.Linq.dll": {}
@@ -305,6 +336,22 @@
           }
         }
       },
+      "system.net.networkinformation/4.3.0": {
+        "runtimeTargets": {
+          "runtimes/linux/lib/netstandard1.3/System.Net.NetworkInformation.dll": {
+            "rid": "linux",
+            "assetType": "runtime"
+          },
+          "runtimes/osx/lib/netstandard1.3/System.Net.NetworkInformation.dll": {
+            "rid": "osx",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.NetworkInformation.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
       "system.net.websockets/4.3.0": {
         "runtime": {
           "lib/netstandard1.3/System.Net.WebSockets.dll": {}
@@ -313,6 +360,11 @@
       "system.runtime.compilerservices.unsafe/4.3.0": {
         "runtime": {
           "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "system.runtime.serialization.primitives/4.3.0": {
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
         }
       },
       "system.text.encoding.codepages/4.3.0": {
@@ -350,6 +402,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "mailkit/1.16.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+TmqWZlDbON05CpqiH6N++LUtqwW6SjUzc526srAogqJvjeTuAYN6vni5jc+riNBc3CFKS23VlyYqOxlZ943IA==",
+      "path": "mailkit/1.16.2",
+      "hashPath": "mailkit.1.16.2.nupkg.sha512"
     },
     "microsoft.aspnetcore.hosting.abstractions/1.1.1": {
       "type": "package",
@@ -512,6 +571,20 @@
       "path": "microsoft.extensions.primitives/1.1.0",
       "hashPath": "microsoft.extensions.primitives.1.1.0.nupkg.sha512"
     },
+    "mimekit/1.16.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n/yoKMfFXUSUzQPz+wvl+eArDA01XntJ3z40DBUduAEpx8QXEpLMRhr177Lwi23dHRA4/aDqb3+X2b6r/X/1hw==",
+      "path": "mimekit/1.16.2",
+      "hashPath": "mimekit.1.16.2.nupkg.sha512"
+    },
+    "portable.bouncycastle/1.8.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G0pWrYwtjjiyka+twqqphegc4ddDWskvf2uWu2YiAUNdaAz0UYa/eXBlt+xjafby5Opa6J1ySw5MPezwiGi9aQ==",
+      "path": "portable.bouncycastle/1.8.1.2",
+      "hashPath": "portable.bouncycastle.1.8.1.2.nupkg.sha512"
+    },
     "remotion.linq/2.1.1": {
       "type": "package",
       "serviceable": true,
@@ -582,6 +655,13 @@
       "path": "system.io.pipes/4.3.0",
       "hashPath": "system.io.pipes.4.3.0.nupkg.sha512"
     },
+    "system.net.networkinformation/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zNVmWVry0pAu7lcrRBhwwU96WUdbsrGL3azyzsbXmVNptae1+Za+UgOe9Z6s8iaWhPn7/l4wQqhC56HZWq7tkg==",
+      "path": "system.net.networkinformation/4.3.0",
+      "hashPath": "system.net.networkinformation.4.3.0.nupkg.sha512"
+    },
     "system.net.websockets/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -595,6 +675,13 @@
       "sha512": "sha512-rcnXA1U9W3QUtMSGoyoNHH6w4V5Rxa/EKXmzpORUYlDAlDB34hIQoU57ATXl8xHa83VvzRm6PcElEizgUd7U5w==",
       "path": "system.runtime.compilerservices.unsafe/4.3.0",
       "hashPath": "system.runtime.compilerservices.unsafe.4.3.0.nupkg.sha512"
+    },
+    "system.runtime.serialization.primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "path": "system.runtime.serialization.primitives/4.3.0",
+      "hashPath": "system.runtime.serialization.primitives.4.3.0.nupkg.sha512"
     },
     "system.text.encoding.codepages/4.3.0": {
       "type": "package",

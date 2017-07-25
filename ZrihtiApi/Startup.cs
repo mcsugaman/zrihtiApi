@@ -16,6 +16,8 @@ using System.Text;
 using ZrihtiApi.Middleware.DataModels;
 using ZrihtiApi.Middleware;
 using Microsoft.Extensions.Options;
+using DAL.Queries.Abstract.TPortalUser;
+using DAL.Queries.Implementation.TPortalUser;
 
 namespace ZrihtiApi
 {
@@ -60,9 +62,13 @@ namespace ZrihtiApi
 
             //Injectanje Businessov
             services.AddScoped<IFrontendBusiness, FrontendBusiness>();
+            services.AddScoped<IAccountBusiness, AccountBusiness>();
 
             //Injectanje Querijev
             services.AddScoped<IGetProvidersQuery, GetProviderQuery>();
+            services.AddScoped<IGetPortalUserByEmailQuery, GetPortalUserByEmailQuery>();
+            services.AddScoped<IAddPortalUserQuery, AddPortalUserQuery>();
+            services.AddScoped<IPortalUserConfirmMailQuery, PortalUserConfirmMailQuery>();
             //konec injectanja
         }
 

@@ -8,6 +8,7 @@ namespace DAL.Entities
         public CodLanguage()
         {
             CodelistTr = new HashSet<CodelistTr>();
+            MobilePackagePriceTr = new HashSet<MobilePackagePriceTr>();
             PackageTr = new HashSet<PackageTr>();
             PlanPackageTr = new HashSet<PlanPackageTr>();
             PriceSetterTr = new HashSet<PriceSetterTr>();
@@ -21,6 +22,7 @@ namespace DAL.Entities
         public bool? IsDefault { get; set; }
 
         public virtual ICollection<CodelistTr> CodelistTr { get; set; }
+        public virtual ICollection<MobilePackagePriceTr> MobilePackagePriceTr { get; set; }
         public virtual ICollection<PackageTr> PackageTr { get; set; }
         public virtual ICollection<PlanPackageTr> PlanPackageTr { get; set; }
         public virtual ICollection<PriceSetterTr> PriceSetterTr { get; set; }

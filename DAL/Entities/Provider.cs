@@ -8,6 +8,7 @@ namespace DAL.Entities
         public Provider()
         {
             Banner1 = new HashSet<Banner1>();
+            MobileProvider = new HashSet<MobileProvider>();
             Office = new HashSet<Office>();
             Package = new HashSet<Package>();
             PortalUser = new HashSet<PortalUser>();
@@ -29,6 +30,7 @@ namespace DAL.Entities
         public DateTime? DateDeleted { get; set; }
 
         public virtual ICollection<Banner1> Banner1 { get; set; }
+        public virtual ICollection<MobileProvider> MobileProvider { get; set; }
         public virtual ICollection<Office> Office { get; set; }
         public virtual ICollection<Package> Package { get; set; }
         public virtual ICollection<PortalUser> PortalUser { get; set; }
