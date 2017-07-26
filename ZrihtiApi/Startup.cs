@@ -69,6 +69,7 @@ namespace ZrihtiApi
             services.AddScoped<IGetPortalUserByEmailQuery, GetPortalUserByEmailQuery>();
             services.AddScoped<IAddPortalUserQuery, AddPortalUserQuery>();
             services.AddScoped<IPortalUserConfirmMailQuery, PortalUserConfirmMailQuery>();
+            services.AddScoped<IPortalUserUpdateQuery, PortalUserUpdateQuery>();
             //konec injectanja
         }
 

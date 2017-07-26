@@ -33,21 +33,24 @@ namespace Business.Implementation
         private readonly IGetPortalUserByEmailQuery _getPortalUserByEmailQuery;
         private readonly IAddPortalUserQuery _addPortalUserQuery;
         private readonly IPortalUserConfirmMailQuery _portalUserConfirmMailQuery;
+        private readonly IPortalUserUpdateQuery _portalUserUpdateQuery;
 
         public AccountBusiness(IGetProvidersQuery getProvidersQuery,
                                 IGetPortalUserByEmailQuery getPortalUserByEmailQuery,
                                 IAddPortalUserQuery addPortalUserQuery,
-                                IPortalUserConfirmMailQuery portalUserConfirmMailQuery)
+                                IPortalUserConfirmMailQuery portalUserConfirmMailQuery,
+                                IPortalUserUpdateQuery portalUserUpdateQuery)
         {
             _getProviderQuery = getProvidersQuery;
             _getPortalUserByEmailQuery = getPortalUserByEmailQuery;
             _addPortalUserQuery = addPortalUserQuery;
             _portalUserConfirmMailQuery = portalUserConfirmMailQuery;
+            _portalUserUpdateQuery = portalUserUpdateQuery;
         }
 
 
         //Deklaracija funkcij za Account
-        public string registerNewUser(string email, string username, string password)
+        public string registerNewUser(string firstName, string lastName, string email, string username, string password)
         {
             PortalUser pUser = _getPortalUserByEmailQuery.execute(email);
 
@@ -55,6 +58,8 @@ namespace Business.Implementation
             if(pUser == null)
             {
                 PortalUser newPortalUser = new PortalUser();
+                newPortalUser.NameFirst = firstName;
+                newPortalUser.NameLast = lastName;
                 newPortalUser.Username = username;
                 newPortalUser.Password = password;
                 newPortalUser.LoginId = email;
@@ -62,6 +67,7 @@ namespace Business.Implementation
                 newPortalUser.Confirmed = false;
                 newPortalUser.DateCreated = DateTime.Now;
                 newPortalUser.IdRole = 2;
+                
 
                 _addPortalUserQuery.execute(newPortalUser);
 
@@ -124,6 +130,77 @@ namespace Business.Implementation
         public string confirmMail(string email, string hash)
         {
             return _portalUserConfirmMailQuery.execute(email, hash);
-        }
+        }//confirmMail
+
+
+
+        public string retrieveForgottenPassword(string email)
+        {
+            PortalUser _user = _getPortalUserByEmailQuery.execute(email);
+            
+            if(_user == null)
+            {
+                return "Error1";
+            }else
+            {
+                _user.ConfirmationHash = Guid.NewGuid().ToString();
+                _portalUserUpdateQuery.execute(_user);
+
+                //toAddress
+                string ToAddress = email;
+                string ToAddressTitle = "Povezava za obnovitev gesla";
+                string Subject = "Obnovitvena povezava za geslo na zrihti.si";
+                string BodyContent = "<h1>Obnovitev gesla</h1><br /><br /><p>Pozdravljeni, " + _user.Username + "." + "</p><br /><br />" +
+                                    "<p>Poslali smo vam obnovitveno povezavo, zato s klikom na</p><a href='http://" + hostUrl + "renewPassword/" + _user.LoginId + "/" + _user.ConfirmationHash +
+                                    "'>OBNOVITEV</a> obnovite svoje geslo.";
+
+                var mimeMessage = new MimeMessage();
+                mimeMessage.From.Add(new MailboxAddress(FromAddressTitle, FromAddress));
+                mimeMessage.To.Add(new MailboxAddress(ToAddressTitle, ToAddress));
+                mimeMessage.Subject = Subject;
+
+                var bodyBuilder = new BodyBuilder();
+                bodyBuilder.HtmlBody = BodyContent;
+
+                mimeMessage.Body = bodyBuilder.ToMessageBody();
+
+                try
+                {
+                    using (var client = new SmtpClient())
+                    {
+                        client.Connect(SmtpServer, SmtpPortNumber, false);
+                        //potrebno samo ce SMTP server zahteva avtentikacijo
+                        //Error 5.5.1 Authentication
+                        client.Authenticate(FromAddress, FromAddressPassword);
+                        client.Send(mimeMessage);
+                        Console.WriteLine("Email za registracijo poslan na naslov " + ToAddress + " !");
+                        client.Disconnect(true);
+                        return "Success1";
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Prišlo je do napake pri pošiljanju potrditvenega maila !!! :" + e.Message);
+                    return "Error2";
+                }
+
+            }
+        }//retrieveForgottenPassword
+
+
+        public string renewPassword(string email, string password)
+        {
+            PortalUser _user = _getPortalUserByEmailQuery.execute(email);
+
+            if(_user == null)
+            {
+                return "Error1";
+            }else
+            {
+                _user.Password = password;
+                _portalUserUpdateQuery.execute(_user);
+                return "Success1";
+            }
+        }//renewPassword
     }
 }

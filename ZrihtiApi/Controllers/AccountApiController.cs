@@ -22,9 +22,9 @@ namespace ZrihtiApi.Controllers
         
 
         [HttpPost]
-        public string registerNewUser(string email, string username, string password)
+        public string registerNewUser(string firstName, string lastName, string email, string username, string password)
         {
-            return _accountBusiness.registerNewUser(email, username, password);
+            return _accountBusiness.registerNewUser(firstName, lastName, email, username, password);
             
         }
 
@@ -33,6 +33,18 @@ namespace ZrihtiApi.Controllers
         {
             return _accountBusiness.confirmMail(email, hash);
 
+        }
+
+        [HttpPost]
+        public string retrieveForgottenPassword(string email)
+        {
+            return _accountBusiness.retrieveForgottenPassword(email);
+        }
+
+        [HttpPost]
+        public string renewPassword(string email, string password)
+        {
+            return _accountBusiness.renewPassword(email, password);
         }
     }
 }
